@@ -42,7 +42,7 @@ style: |
 
 ---
 
-<h1> Vergleichskriterien
+<h1> Vergleichskriterien </h1>
 
 - Sicherheit
 - Kosten
