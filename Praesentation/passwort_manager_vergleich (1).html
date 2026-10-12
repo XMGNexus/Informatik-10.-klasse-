@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passwort Manager Vergleich</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #090514;
+            color: #39FF14;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            padding: 3rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+            text-shadow: 0 0 6px rgba(57, 255, 20, 0.4);
+        }
+        .slide.active {
+            display: flex;
+        }
+        h1 {
+            color: #00F0FF;
+            font-size: 2.8rem;
+            border-bottom: 2px dashed #00F0FF;
+            padding-bottom: 10px;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 12px rgba(0, 240, 255, 0.8);
+        }
+        h3 {
+            color: #FF007F;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
+        }
+        ol, ul {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-left: 2rem;
+            line-height: 1.8;
+        }
+        ul {
+            list-style-type: '> ';
+        }
+        ol {
+            color: #00F0FF;
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+        }
+        strong {
+            color: #FF007F !important;
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.85) !important;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            background-color: #090514;
+            border: 2px solid #00F0FF;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+        }
+        th, td {
+            padding: 14px;
+            border-right: 1px solid #00F0FF;
+            text-align: left;
+        }
+        th {
+            background-color: #120a26;
+            color: #00F0FF;
+            font-weight: bold;
+            border-bottom: 2px solid #00F0FF;
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.7);
+        }
+        td {
+            color: #39FF14;
+            border-bottom: 1px solid #1a0f38;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        th:last-child, td:last-child {
+            border-right: none;
+        }
+        tr:nth-child(even) {
+            background-color: #120a26;
+        }
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+        .column-box {
+            border: 1px solid #FF007F;
+            padding: 1.5rem;
+            background: #0d071f;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .column-box img {
+            max-width: 75px;
+            height: auto;
+            margin-top: 1rem;
+        }
+        .compact {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: #39FF14;
+        }
+        .controls {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 2rem;
+            font-size: 1rem;
+            color: #00F0FF;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 1 -->
+    
+    <div class="slide active">
+        <h1>[SYS_INIT]: Passwort Manager Vergleich</h1>
+        <h3>root@cyber_terminal:~# NordPass, Bitwarden & Proton Pass</h3>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <h1>[FETCH_REPOS]: // Anbieter im Überblick</h1>
+        <div class="columns">
+            <div class="column-box">
+                <h3>01_NordPass</h3>
+                <img src="./bilder/nordpass-logo_1-1-30.png" alt="NordPass" />
+            </div>
+            <div class="column-box">
+                <h3>02_Bitwarden</h3>
+                <img src="./bilder/bitwarden.png" alt="Bitwarden" />
+            </div>
+            <div class="column-box">
+                <h3>03_Proton_Pass</h3>
+                <img src="./bilder/proton_pass.png" alt="Proton Pass" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <h1>[ANALYSIS]: Vergleichskriterien</h1>
+        <ul style="list-style-type: none; margin-left: 0;">
+            <li><strong>Sicherheit & Verschlüsselung</strong> ── [CRYPT_LOG]</li>
+            <li><strong>Kosten & Tarife</strong> ────────────── [PRICING_DEPT]</li>
+            <li><strong>Komfort &amp; Plattformen</strong> ──────── [UI_UX_LAYER]</li>
+        </ul>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <h1>[DATA_GRID]: Kernstärken</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Manager</th>
+                    <th>Stärke</th>
+                    <th>Feature</th>
+                    <th>Krypto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Bitwarden</strong></td>
+                    <td>Preis-Leistung</td>
+                    <td>Open Source & Self-Hosting</td>
+                    <td>AES-256</td>
+                </tr>
+                <tr>
+                    <td><strong>Proton Pass</strong></td>
+                    <td>Datenschutz</td>
+                    <td>E-Mail-Aliasse</td>
+                    <td>Argon2 & AES</td>
+                </tr>
+                <tr>
+                    <td><strong>NordPass</strong></td>
+                    <td>Bedienung</td>
+                    <td>Intuitive UI</td>
+                    <td>XChaCha20</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <h1>[SEC_CHECK]: Kriterium 1: Sicherheit</h1>
+        <ul>
+            <li><strong>Zero-Knowledge:</strong> Keinerlei Klartext-Einsicht durch Anbieter</li>
+            <li><strong>Bitwarden & Proton Pass:</strong> Standardisierte <strong>AES-256-Verschlüsselung</strong></li>
+            <li><strong>NordPass:</strong> Moderner, performanter <strong>XChaCha20-Algorithmus</strong></li>
+        </ul>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+        <h1>[COST_LAYER]: Kriterium 2: Kosten</h1>
+        <ul>
+            <li><strong>Bitwarden:</strong> Bester <strong>Free-Tarif</strong> (unlimitierte Geräte & Passwörter)</li>
+            <li><strong>Proton Pass:</strong> Unlimitierte Geräte, aber Limit bei Mail-Aliassen</li>
+            <li><strong>NordPass Free:</strong> Stark restriktiv (nur <strong>1 aktives Gerät</strong> gleichzeitig)</li>
+        </ul>
+    </div>
+
+    <!-- Slide 7 -->
+    <div class="slide">
+        <h1>[UI_EFFICIENCY]: Kriterium 3: Komfort</h1>
+        <ul>
+            <li><strong>Plattformen:</strong> Apps für Mobile & alle gängigen Browser-Erweiterungen</li>
+            <li><strong>Autofill & Passkeys:</strong> Biometrischer Login & moderne <strong>Passkey-Verwaltung</strong></li>
+        </ul>
+    </div>
+
+    <!-- Slide 8 -->
+    <div class="slide">
+        <h1>[MASK_ING]: Feature: E-Mail-Aliasse</h1>
+        <ul>
+            <li><strong>Proton Pass:</strong> Native <strong>"Hide-my-Email"-Funktion</strong> (Spamschutz)</li>
+            <li><strong>NordPass:</strong> E-Mail-Masking nur in <strong>Premium-Tarifen</strong> verfügbar</li>
+            <li><strong>Bitwarden:</strong> Nur über externe Drittanbieter-Dienste koppelbar</li>
+        </ul>
+    </div>
+
+    <!-- Slide 9 -->
+    <div class="slide">
+        <h1>[AUDIT_LOG]: Feature: Quellcode</h1>
+        <ul>
+            <li><strong>Bitwarden & Proton Pass:</strong> Vollständiger <strong>Open-Source-Code</strong></li>
+            <li><strong>NordPass:</strong> Proprietär, aber regelmäßige externe Audits (<strong>Cure53</strong>)</li>
+        </ul>
+    </div>
+
+    <!-- Slide 10 -->
+    <div class="slide">
+        <h1>[SUMMARY]: Zusammenfassung</h1>
+        <ul>
+            <li><strong>Sicherheit:</strong> <strong>Zero-Knowledge-Verschlüsselung</strong> bei allen drei Diensten</li>
+            <li><strong>Kosten:</strong> <strong>Bitwarden & Proton Pass</strong> gratis, <strong>NordPass Free</strong> restriktiv</li>
+            <li><strong>Komfort:</strong> <strong>Autofill & Top-Apps</strong> überall, NordPass mit bester UI</li>
+        </ul>
+    </div>
+
+    <!-- Slide 11 -->
+    <div class="slide">
+        <h1>[LOG_OUT]: Fazit & Empfehlung</h1>
+        <div class="columns">
+            <div class="column-box">
+                <h3>> Bitwarden</h3>
+                <span class="compact">Für Open-Source-Fans, Self-Hosting & <strong>Sparfüchse</strong>.</span>
+                <img src="./bilder/bitwarden.png" alt="Bitwarden" />
+            </div>
+            <div class="column-box">
+                <h3>> Proton Pass</h3>
+                <span class="compact">Für maximalen <strong>Datenschutz</strong> & integrierten Spamschutz.</span>
+                <img src="./bilder/proton_pass.png" alt="Proton Pass" />
+            </div>
+            <div class="column-box">
+                <h3>> NordPass</h3>
+                <span class="compact">Für <strong>Design-Liebhaber</strong> mit Budget für Premium.</span>
+                <img src="./bilder/nordpass-logo_1-1-30.png" alt="NordPass" />
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">Pfeiltasten oder Leertaste zum Navigieren</div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+                showSlide(currentSlide + 1);
+            } else if (e.key === 'ArrowLeft') {
+                showSlide(currentSlide - 1);
+            }
+        });
+    </script>
+</body>
+</html>
