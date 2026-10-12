@@ -18,7 +18,7 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
         }
         h1 {
@@ -28,25 +28,22 @@
             padding-bottom: 10px;
             margin-bottom: 2rem;
             text-shadow: 0 0 12px rgba(0, 240, 255, 0.8);
-            text-align: center;
         }
-        h2 {
+        .terminal-header {
             color: #FF007F;
-            font-size: 1.8rem;
-            margin: 2rem 0 1rem 0;
-            text-shadow: 0 0  8px rgba(255, 0, 127, 0.6);
-            border-left: 4px solid #FF007F;
-            padding-left: 10px;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
         }
         
         /* Accordion Styles */
         .accordion-item {
-            background-color: #110b24;
-            border: 1px solid #39FF14;
+            border: 1px solid #00F0FF;
             margin-bottom: 1rem;
+            background-color: rgba(9, 5, 20, 0.6);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 0 8px rgba(57, 255, 20, 0.1);
         }
         .accordion-header {
             padding: 1rem 1.5rem;
@@ -54,234 +51,221 @@
             align-items: center;
             cursor: pointer;
             user-select: none;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #39FF14;
+            background-color: #120b24;
             transition: background-color 0.3s;
         }
         .accordion-header:hover {
-            background-color: #1a1035;
+            background-color: #1a1033;
         }
-        .accordion-icon {
+        .arrow {
             color: #FF007F;
-            margin-right: 15px;
+            font-size: 1.4rem;
             font-weight: bold;
+            margin-right: 1rem;
             transition: transform 0.3s ease;
             display: inline-block;
             text-shadow: 0 0 8px rgba(255, 0, 127, 0.8);
         }
-        .accordion-item.active .accordion-icon {
+        .accordion-item.active .arrow {
             transform: rotate(90deg);
+        }
+        .title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #39FF14;
+            text-shadow: 0 0 5px rgba(57, 255, 20, 0.4);
         }
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out, padding 0.3s ease;
             padding: 0 1.5rem;
-            background-color: #0d071f;
-            font-size: 1.1rem;
-            color: #e0dcf0;
         }
         .accordion-item.active .accordion-content {
-            padding: 1.2rem 1.5rem;
+            padding: 1rem 1.5rem;
         }
         
-        /* Utility styles inside content */
-        strong {
-            color: #FF007F !important;
-            text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
-        }
-        .cyan-text {
-            color: #00F0FF;
-            text-shadow: 0 0 6px rgba(0, 240, 255, 0.5);
-        }
+        /* Content Styling */
         ul {
             list-style-type: none;
-            padding-left: 1rem;
+            padding-left: 0;
         }
         ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
             position: relative;
+            padding-left: 1.5rem;
         }
         ul li::before {
-            content: "» ";
-            color: #00F0FF;
+            content: "»";
             position: absolute;
-            left: -1rem;
+            left: 0;
+            color: #FF007F;
+            text-shadow: 0 0 5px rgba(255, 0, 127, 0.8);
         }
-
+        strong {
+            color: #FF007F !important;
+            text-shadow: 0 0 10px rgba(255, 0, 127, 0.85) !important;
+        }
+        
         /* Table Styles */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2rem 0;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             font-size: 1.1rem;
-            background-color: #090514;
             border: 2px solid #00F0FF;
             box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
         }
         th, td {
             border: 1px solid #00F0FF;
-            padding: 12px;
+            padding: 0.8rem;
             text-align: left;
         }
         th {
-            background-color: #110b24;
+            background-color: #120b24;
             color: #00F0FF;
-            text-shadow: 0 0 6px rgba(0, 240, 255, 0.6);
+            text-shadow: 0 0 5px rgba(0, 240, 255, 0.6);
         }
         tr:nth-child(even) {
-            background-color: #0d071f;
-        }
-        tr:hover {
-            background-color: #1a1035;
+            background-color: rgba(18, 11, 36, 0.4);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>[SYS_INIT]: Passwort Manager Vergleich</h1>
-        
-        <h2>// Anbieter im Überblick</h2>
-        
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="accordion-icon">&gt;</span>
-                <span>01_NordPass</span>
-            </div>
-            <div class="accordion-content">
-                <p>Der moderne Player mit Fokus auf Geschwindigkeit und Usability. Nutzt den innovativen <strong class="cyan-text">XChaCha20</strong> Verschlüsselungsalgorithmus und bietet eine exzellente, intuitive Benutzeroberfläche. E-Mail-Maskierung ist hier primär den Premium-Tarifen vorbehalten.</p>
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="accordion-icon">&gt;</span>
-                <span>02_Bitwarden</span>
-            </div>
-            <div class="accordion-content">
-                <p>Der unangefochtene Champion in Sachen <strong class="cyan-text">Preis-Leistung</strong>. Vollständig Open Source, erlaubt uneingeschränktes Self-Hosting und bietet bereits in der Gratis-Variante die Synchronisation über unlimitierte Geräte hinweg. Setzt auf bewährte AES-256-Bit-Verschlüsselung.</p>
-            </div>
-        </div>
+<div class="container">
+    <h1>Passwort Manager Vergleich</h1>
+    <div class="terminal-header">root@cyber_terminal:~# NordPass, Bitwarden & Proton Pass</div>
 
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="accordion-icon">&gt;</span>
-                <span>03_Proton_Pass</span>
-            </div>
-            <div class="accordion-content">
-                <p>Aus dem Schweizer Datenschutz-Ökosystem stammend, glänzt dieser Manager mit integrierten <strong class="cyan-text">E-Mail-Aliassen</strong> ("Hide-my-Email"-Funktion) zum optimalen Schutz vor Spam. Ebenfalls voll transparent via Open Source aufgebaut und extrem stark verschlüsselt (Argon2 & AES).</p>
-            </div>
+    <!-- Data Grid Table -->
+    <div class="accordion-item active">
+        <div class="accordion-header">
+            <span class="arrow">&gt;</span>
+            <span class="title">Kernstärken im Überblick</span>
         </div>
-
-        <h2>// Analyse & Vergleichskriterien</h2>
-        
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="accordion-icon">&gt;</span>
-                <span>Kriterium 1: Sicherheit &amp; Verschlüsselung</span>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li><strong>Zero-Knowledge-Architektur:</strong> Keinerlei Klartext-Einsicht in deine Daten durch die Anbieter selbst.</li>
-                    <li><strong>Bitwarden &amp; Proton Pass:</strong> Setzen auf die industrieweit standardisierte, extrem robuste <strong>AES-256-Verschlüsselung</strong>.</li>
-                    <li><strong>NordPass:</strong> Verlässt traditionelle Pfade mit dem modernen, hochperformanten <strong>XChaCha20-Algorithmus</strong>.</li>
-                </ul>
-            </div>
+        <div class="accordion-content" style="max-height: 500px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Manager</th>
+                        <th>Stärke</th>
+                        <th>Feature</th>
+                        <th>Krypto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bitwarden</strong></td>
+                        <td>Preis-Leistung</td>
+                        <td>Open Source & Self-Hosting</td>
+                        <td>AES-256</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proton Pass</strong></td>
+                        <td>Datenschutz</td>
+                        <td>E-Mail-Aliasse</td>
+                        <td>Argon2 & AES</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NordPass</strong></td>
+                        <td>Bedienung</td>
+                        <td>Intuitive UI</td>
+                        <td>XChaCha20</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="accordion-icon">&gt;</span>
-                <span>Kriterium 2: Kosten &amp; Tarife</span>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li><strong>Bitwarden:</strong> Bester kostenloser Tarif des Marktes (synchronisiert unlimitierte Geräte &amp; Passwörter gratis).</li>
-                    <li><strong>Proton Pass:</strong> Bietet unlimitierte Geräte im Free-Tarif, deckelt dort jedoch die Erstellung nativer Mail-Aliasse.</li>
-                    <li><strong>NordPass Free:</strong> Stark restriktiv für Gratis-Nutzer, da zeitgleich immer nur <strong>1 aktives Gerät</strong> eingeloggt sein darf.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="accordion-icon">&gt;</span>
-                <span>Kriterium 3: Komfort &amp; Plattformen</span>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li><strong>Cross-Plattform:</strong> Native Apps für iOS &amp; Android sowie Erweiterungen für alle gängigen Desktop-Browser vorhanden.</li>
-                    <li><strong>Autofill &amp; Passkeys:</strong> Alle drei Kontrahenten beherrschen flüssiges Ausfüllen im Alltag sowie moderne <strong>Passkey-Verwaltung</strong> und biometrische Logins.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <span class="accordion-icon">&gt;</span>
-                <span>Feature-Deep-Dive: E-Mail-Aliasse &amp; Quellcode</span>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li><strong>E-Mail-Aliasse:</strong> <span class="cyan-text">Proton Pass</span> liefert diesen Spamschutz nativ mit. Bei <span class="cyan-text">NordPass</span> kostet es extra, bei <span class="cyan-text">Bitwarden</span> läuft es über Drittanbieter.</li>
-                    <li><strong>Transparenz:</strong> <span class="cyan-text">Bitwarden</span> und <span class="cyan-text">Proton Pass</span> legen ihren kompletten Code offen (Open Source). <span class="cyan-text">NordPass</span> ist proprietär, gleicht das aber mit regelmäßigen externen Sicherheits-Audits (Cure53) aus.</li>
-                </ul>
-            </div>
-        </div>
-
-        <h2>// DATA_GRID: Kernstärken im Direktvergleich</h2>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Manager</th>
-                    <th>Hauptstärke</th>
-                    <th>Besonderes Feature</th>
-                    <th>Krypto-Standard</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Bitwarden</strong></td>
-                    <td>Preis-Leistung</td>
-                    <td>Open Source &amp; Self-Hosting</td>
-                    <td>AES-256</td>
-                </tr>
-                <tr>
-                    <td><strong>Proton Pass</strong></td>
-                    <td>Datenschutz</td>
-                    <td>Integrierte E-Mail-Aliasse</td>
-                    <td>Argon2 &amp; AES</td>
-                </tr>
-                <tr>
-                    <td><strong>NordPass</strong></td>
-                    <td>Bedienung</td>
-                    <td>Intuitive moderne UI</td>
-                    <td>XChaCha20</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
-    <script>
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                const content = item.querySelector('.accordion-content');
-                
-                // Toggle active class on item
-                item.classList.toggle('active');
-                
-                if (item.classList.contains('active')) {
-                    // Set max-height to scrollHeight to trigger smooth CSS transition
-                    content.style.maxHeight = content.scrollHeight + "px";
-                } else {
-                    // Shrink back
-                    content.style.maxHeight = null;
-                }
-            });
+    <!-- Kriterium 1 -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span class="arrow">&gt;</span>
+            <span class="title">Sicherheit & Verschlüsselung</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li><strong>Zero-Knowledge:</strong> Keinerlei Klartext-Einsicht durch Anbieter.</li>
+                <li><strong>Bitwarden & Proton Pass:</strong> Standardisierte <strong>AES-256-Verschlüsselung</strong>.</li>
+                <li><strong>NordPass:</strong> Moderner, performanter <strong>XChaCha20-Algorithmus</strong>.</li>
+                <li><strong>Quellcode:</strong> Bitwarden & Proton Pass sind vollständig <strong>Open-Source</strong>. NordPass ist proprietär, nutzt aber regelmäßige externe Audits durch <strong>Cure53</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kriterium 2 -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span class="arrow">&gt;</span>
+            <span class="title">Kosten & Tarife</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li><strong>Bitwarden:</strong> Bester <strong>Free-Tarif</strong> mit unlimitierten Geräten & Passwörtern.</li>
+                <li><strong>Proton Pass:</strong> Unlimitierte Geräte in der Gratisversion, aber Limitierungen bei Mail-Aliassen.</li>
+                <li><strong>NordPass Free:</strong> Stark restriktiv – erlaubt nur <strong>1 aktives Gerät</strong> gleichzeitig.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Kriterium 3 -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span class="arrow">&gt;</span>
+            <span class="title">Komfort & Features</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li><strong>Plattformen:</strong> Apps für Mobile & alle gängigen Browser-Erweiterungen überall verfügbar.</li>
+                <li><strong>Autofill & Passkeys:</strong> Biometrischer Login & moderne <strong>Passkey-Verwaltung</strong> integriert.</li>
+                <li><strong>E-Mail-Aliasse (Spamschutz):</strong> Native <strong>"Hide-my-Email"-Funktion</strong> bei Proton Pass. Bei NordPass nur in Premium-Tarifen, bei Bitwarden nur über externe Drittanbieter koppelbar.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Fazit -->
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span class="arrow">&gt;</span>
+            <span class="title">Fazit & Empfehlung</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li><strong>Bitwarden:</strong> Perfekt für Open-Source-Fans, Self-Hosting & <strong>Sparfüchse</strong>.</li>
+                <li><strong>Proton Pass:</strong> Ideal für maximalen <strong>Datenschutz</strong> & integrierten Spamschutz.</li>
+                <li><strong>NordPass:</strong> Am besten für <strong>Design-Liebhaber</strong> mit Budget für Premium-Tarife.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const content = item.querySelector('.accordion-content');
+            
+            // Toggle active class on item
+            item.classList.toggle('active');
+            
+            if (item.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = "0px";
+            }
         });
-    </script>
+    });
+
+    // Initialize the open item's height on load
+    window.addEventListener('load', () => {
+        const activeContent = document.querySelector('.accordion-item.active .accordion-content');
+        if (activeContent) {
+            activeContent.style.maxHeight = activeContent.scrollHeight + "px";
+        }
+    });
+</script>
+
 </body>
 </html>
