@@ -21,3 +21,6 @@
 # 12.10.26
 - Erstellung von Kommentaren für die spätere Präsentation
 - Rechtschreibung und Grammatik kontrolliert und korrigiert
+---
+# 14.10.26
+- Verbesserung der PDF- und HTML-Datei

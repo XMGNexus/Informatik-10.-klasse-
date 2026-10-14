@@ -21,7 +21,7 @@ marp: true
 ---
 
 # Auswahl:
-Ich habe **Bitwarden** gewählt, weil Herr Lehnen uns es vorgeschlagen hat.
+Ich habe **Bitwarden** gewählt, weil Herr Lehnen es uns vorgeschlagen hat.
 Ich habe **NordPass** gewählt, weil ich schon von NordVPN gehört habe und gesehen habe dass es auch NordPass gibt.
 Ich habe **ProtonPass** gewählt, weil ich oft Werbung davon bekomme.
 
