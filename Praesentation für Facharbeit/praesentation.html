@@ -38,51 +38,82 @@
         
         /* Accordion Styles */
         .accordion-item {
-            border: 1px solid #00F0FF;
+            position: relative;
+            border: 1px solid rgba(0, 240, 255, 0.7);
             margin-bottom: 1rem;
-            background-color: rgba(9, 5, 20, 0.6);
-            box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
-            border-radius: 4px;
+            background: linear-gradient(180deg, rgba(18, 11, 36, 0.92), rgba(9, 5, 20, 0.88));
+            box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.2), 0 0 18px rgba(0, 240, 255, 0.08);
+            border-radius: 14px;
             overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .accordion-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.35), 0 0 22px rgba(0, 240, 255, 0.14);
+        }
+        .accordion-item + .accordion-item {
+            margin-top: 1.6rem;
+        }
+        .accordion-item + .accordion-item::before {
+            content: "";
+            position: absolute;
+            top: -0.8rem;
+            left: 12%;
+            right: 12%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.8), transparent);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+        .accordion-item:first-child::before {
+            display: none;
         }
         .accordion-header {
-            padding: 1rem 1.5rem;
+            padding: 1.05rem 1.4rem;
             display: flex;
             align-items: center;
             cursor: pointer;
             user-select: none;
-            background-color: #120b24;
-            transition: background-color 0.3s;
+            background: linear-gradient(90deg, rgba(18, 11, 36, 0.95), rgba(27, 18, 46, 0.9));
+            border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+            transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
         }
         .accordion-header:hover {
-            background-color: #1a1033;
+            background: linear-gradient(90deg, rgba(23, 15, 43, 1), rgba(34, 18, 60, 0.96));
+        }
+        .accordion-item.active .accordion-header {
+            background: linear-gradient(90deg, rgba(26, 16, 44, 1), rgba(18, 11, 36, 0.96));
+            box-shadow: inset 0 -1px 0 rgba(0, 240, 255, 0.3);
         }
         .arrow {
             color: #FF007F;
             font-size: 1.4rem;
             font-weight: bold;
             margin-right: 1rem;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, color 0.2s ease;
             display: inline-block;
             text-shadow: 0 0 8px rgba(255, 0, 127, 0.8);
         }
         .accordion-item.active .arrow {
             transform: rotate(90deg);
+            color: #39FF14;
         }
         .title {
             font-size: 1.3rem;
             font-weight: bold;
             color: #39FF14;
             text-shadow: 0 0 5px rgba(57, 255, 20, 0.4);
+            letter-spacing: 0.03em;
         }
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            transition: max-height 0.35s ease-out, padding 0.3s ease;
+            background: rgba(9, 5, 20, 0.78);
             padding: 0 1.5rem;
         }
         .accordion-item.active .accordion-content {
-            padding: 1rem 1.5rem;
+            padding: 0rem 1.2rem 0rem;
+            border-top: 1px solid rgba(0, 240, 255, 0.2);
         }
         
         /* Content Styling */
@@ -140,12 +171,12 @@
     <div class="terminal-header">root@cyber_terminal:~# NordPass, Bitwarden & Proton Pass</div>
 
     <!-- Data Grid Table -->
-    <div class="accordion-item active">
+    <div class="accordion-item">
         <div class="accordion-header">
             <span class="arrow">&gt;</span>
             <span class="title">Kernstärken im Überblick</span>
         </div>
-        <div class="accordion-content" style="max-height: 500px;">
+        <div class="accordion-content">
             <table>
                 <thead>
                     <tr>
@@ -258,13 +289,8 @@
         });
     });
 
-    // Initialize the open item's height on load
-    window.addEventListener('load', () => {
-        const activeContent = document.querySelector('.accordion-item.active .accordion-content');
-        if (activeContent) {
-            activeContent.style.maxHeight = activeContent.scrollHeight + "px";
-        }
-    });
+    // Initialize first open state only if needed later
+    // no default active item on load
 </script>
 
 </body>

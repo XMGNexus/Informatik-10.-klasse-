@@ -13,7 +13,7 @@
 
 ---
 # 7.10.26
-- Dekoration mit KI
+- Dekoration mit KI - Prompt: "Erstelle zu dem Thema der Präsentation einen passenden Hintergrund und passende Schriftfarben."
 - Ergänzung von Informationen
 - Quellen für Informationen eingefügt
 - Erstellung PDF- und HTML-Datei mithilfe von KI

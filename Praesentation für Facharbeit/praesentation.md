@@ -125,10 +125,10 @@ style: |
 
 # [SYS_INIT]: Passwort-Manager Vergleich
 ### root@cyber_terminal:~# NordPass, Bitwarden & Proton Pass
-<!-- [Folie 1: SYS_INIT] -->
+<!-- [Folie 1: Passwort-Manager Vergleich] -->
 <!--
 [SPRECHTEXT]
-Guten Tag. Ich begrüße Sie zum Vergleich der Passwortmanager NordPass, Bitwarden und Proton Pass. Gängige Passwörter stellen heute ein massives Sicherheitsrisiko dar. Diese Präsentation analysiert, wie moderne Verwaltungstools dieses Problem strukturell lösen und wo die wesentlichen Unterschiede der drei Anbieter liegen.
+Hey! Heute vergleiche ich NordPass, Bitwarden und Proton Pass. Viele Leute benutzen immer noch unsichere Passwörter, und genau deshalb sind Passwortmanager so wichtig. In dieser Präsentation schauen wir uns an, wie die drei Anbieter das Problem lösen und wo die wichtigsten Unterschiede liegen.
 -->
 
 ---
@@ -144,19 +144,19 @@ Guten Tag. Ich begrüße Sie zum Vergleich der Passwortmanager NordPass, Bitward
 <div class="column-box">
 <h3>02_Bitwarden</h3>
 <br>
-<img src="./bilder/bitwarden.png" style="display:block;" />
+<img src="./bilder/Bitwarden.png" style="display:block;" />
 </div>
 <div class="column-box">
 <h3>03_Proton_Pass</h3>
 <br>
-<img src="./bilder/proton_pass.png" style="display:block;" />
+<img src="./bilder/Proton_Pass.png" style="display:block;" />
 </div>
 </div>
 
-<!-- [Folie 2: FETCH_REPOS] -->
+<!-- [Folie 2: Anbieter im Überblick] -->
 <!--
 [SPRECHTEXT]
-Unsere drei Testkandidaten im Überblick: NordPass basiert auf der Infrastruktur von NordVPN. Bitwarden ist der etablierte Standard der Open-Source-Community. Proton Pass ist ein Schweizer Newcomer mit starkem Fokus auf informationelle Selbstbestimmung. Alle drei verfolgen technologisch unterschiedliche Ansätze.
+So sieht die Auswahl aus: NordPass kommt von NordVPN, Bitwarden ist der bekannte Open-Source-Standard und Proton Pass ist eher ein Datenschutz-Tool aus der Schweiz. Alle drei haben zwar ähnliche Ziele, aber ziemlich unterschiedliche Ideen, wie sie das umsetzen.
 -->
 
 ---
@@ -167,10 +167,10 @@ Unsere drei Testkandidaten im Überblick: NordPass basiert auf der Infrastruktur
 - **Kosten & Tarife** ────────────── [PRICING_DEPT]
 - **Komfort &amp; Plattformen** ──────── [UI_UX_LAYER]
 
-<!-- [Folie 3: ANALYSIS] -->
+<!-- [Folie 3: Vergleichskriterien] -->
 <!--
 [SPRECHTEXT]
-Die Evaluierung erfolgt anhand dreier Kernkriterien: Erstens der Sicherheits- und Verschlüsselungsarchitektur. Zweitens der Preisstruktur und den Einschränkungen der Tarife. Drittens dem Nutzungskomfort sowie der plattformübergreifenden Verfügbarkeit im Alltag.
+Ich vergleiche die Anbieter anhand von drei Dingen: Sicherheit, Kosten und wie einfach sie im Alltag zu benutzen sind. Dabei geht es vor allem darum, was wirklich wichtig ist, wenn man einen Passwortmanager langfristig nutzen will.
 -->
 
 ---
@@ -183,10 +183,10 @@ Die Evaluierung erfolgt anhand dreier Kernkriterien: Erstens der Sicherheits- un
 | **Proton Pass** | Datenschutz | E-Mail-Aliasse | Argon2 & AES |
 | **NordPass** | Bedienung | Intuitive UI | XChaCha20 |
 
-<!-- [Folie 4: DATA_GRID] -->
+<!-- [Folie 4: Kernstärken] -->
 <!--
 [SPRECHTEXT]
-Dieses Daten-Grid komprimiert die Kernstärken: Bitwarden überzeugt durch das Preis-Leistungs-Verhältnis und Self-Hosting. Proton Pass sichert den Datenschutz mittels nativer E-Mail-Aliasse. NordPass fokussiert sich auf maximale Benutzerfreundlichkeit und das moderne Verschlüsselungsverfahren XChaCha20.
+Hier sieht man die wichtigsten Stärken auf einen Blick: Bitwarden ist super für Preis-Leistung und Self-Hosting, Proton Pass punktet mit Datenschutz und Mail-Aliassen und NordPass ist besonders einfach und angenehm zu bedienen.
 -->
 
 ---
@@ -197,10 +197,10 @@ Dieses Daten-Grid komprimiert die Kernstärken: Bitwarden überzeugt durch das P
 - **Bitwarden & Proton Pass:** Standardisierte **AES-256-Verschlüsselung**
 - **NordPass:** Moderner, performanter **XChaCha20-Algorithmus**
 
-<!-- [Folie 5: SEC_CHECK] -->
+<!-- [Folie 5: Kriterium 1: Sicherheit] -->
 <!--
 [SPRECHTEXT]
-Zum Kriterium Sicherheit: Alle Dienste nutzen eine Zero-Knowledge-Architektur; der Anbieter hat somit keinen Zugriff auf die Daten. Bitwarden und Proton Pass setzen auf den Industriestandard AES-256. NordPass nutzt XChaCha20, was auf Mobilgeräten performanter und als zukunftssicher einzustufen ist.
+Beim Thema Sicherheit sind alle drei relativ gut aufgestellt. Sie arbeiten mit Zero-Knowledge, also ohne dass der Anbieter die Passwörter direkt einsehen kann. Bitwarden und Proton Pass benutzen AES-256, und NordPass setzt auf XChaCha20, was besonders schnell und modern ist.
 -->
 
 ---
@@ -211,10 +211,10 @@ Zum Kriterium Sicherheit: Alle Dienste nutzen eine Zero-Knowledge-Architektur; d
 - **Proton Pass:** Unlimitierte Geräte, aber Limit bei Mail-Aliassen
 - **NordPass Free:** Stark restriktiv (nur **1 aktives Gerät** gleichzeitig)
 
-<!-- [Folie 6: COST_LAYER] -->
+<!-- [Folie 6: Kriterium 2: Kosten] -->
 <!--
 [SPRECHTEXT]
-Der Kostenvergleich zeigt deutliche Unterschiede: Bitwarden bietet die leistungsstärkste Gratisversion für unbegrenzte Geräte. Proton Pass folgt mit minimalen Einschränkungen. NordPass Free ist hochgradig restriktiv, da die parallele Nutzung auf mehreren Geräten komplett blockiert wird.
+Bei den Preisen gibt es ziemlich große Unterschiede. Bitwarden hat die beste Gratisversion, Proton Pass ist auch okay, aber mit kleinen Einschränkungen. NordPass Free ist dagegen ziemlich eingeschränkt, weil man dort nur ein Gerät gleichzeitig nutzen kann.
 -->
 
 ---
@@ -224,10 +224,10 @@ Der Kostenvergleich zeigt deutliche Unterschiede: Bitwarden bietet die leistungs
 - **Plattformen:** Apps für Mobile & alle gängigen Browser-Erweiterungen
 - **Autofill & Passkeys:** Biometrischer Login & moderne **Passkey-Verwaltung**
 
-<!-- [Folie 7: UI_EFFICIENCY] -->
+<!-- [Folie 7: Kriterium 3: Komfort] -->
 <!--
 [SPRECHTEXT]
-Bezüglich des Komforts bieten alle Kandidaten ausgereifte Applikationen für gängige Betriebssysteme und Browser. Die Integration von Autofill-Funktionen via Biometrie arbeitet fehlerfrei. Zudem unterstützen alle drei Anbieter bereits den modernen Anmeldestandard über Passkeys.
+Im Alltag sind alle drei recht leicht nutzbar. Sie haben Apps für Handy und Browser und unterstützen Autofill sowie Passkeys. Das macht die Anmeldung einfach und deutlich sicherer, weil man nicht ständig Passwörter selbst eintippen muss.
 -->
 
 ---
@@ -238,10 +238,10 @@ Bezüglich des Komforts bieten alle Kandidaten ausgereifte Applikationen für g�
 - **NordPass:** E-Mail-Masking nur in **Premium-Tarifen** verfügbar
 - **Bitwarden:** Nur über externe Drittanbieter-Dienste koppelbar
 
-<!-- [Folie 8: MASK_ING] -->
+<!-- [Folie 8: Feature: E-Mail-Aliasse] -->
 <!--
 [SPRECHTEXT]
-Das Zusatzfeature E-Mail-Aliasse dient dem Schutz vor Spam und Datenlecks. Proton Pass bietet diese Funktion nativ in der Basisversion an. NordPass verlangt hierfür ein Premium-Abo. Bei Bitwarden ist die Funktion nur über die manuelle Verknüpfung externer Drittanbieter verfügbar.
+Ein cooles Extra ist die E-Mail-Alias-Funktion. Damit kann man für Websites zufällige E-Mail-Adressen nutzen und so Spam vermeiden. Proton Pass bietet das direkt an, bei NordPass ist das nur mit Premium und bei Bitwarden braucht man dafür oft externe Tools.
 -->
 
 ---
@@ -251,10 +251,10 @@ Das Zusatzfeature E-Mail-Aliasse dient dem Schutz vor Spam und Datenlecks. Proto
 - **Bitwarden & Proton Pass:** Vollständiger **Open-Source-Code**
 - **NordPass:** Proprietär, aber regelmäßige externe Audits (**Cure53**)
 
-<!-- [Folie 9: AUDIT_LOG] -->
+<!-- [Folie 9: Feature: Quellcode] -->
 <!--
 [SPRECHTEXT]
-Ein kritischer Faktor ist die Transparenz des Quellcodes. Bitwarden und Proton Pass sind vollständig quelloffen und somit öffentlich verifizierbar. NordPass ist proprietär, kompensiert dies jedoch durch regelmäßige, unabhängige Sicherheitsaudits, unter anderem durch die renommierte Firma Cure53.
+Ein wichtiger Punkt ist auch die Transparenz. Bitwarden und Proton Pass sind Open Source, also öffentlich einsehbar. NordPass ist nicht Open Source, aber es gibt regelmäßig externe Sicherheitsprüfungen, zum Beispiel von Cure53.
 -->
 
 ---
@@ -265,10 +265,10 @@ Ein kritischer Faktor ist die Transparenz des Quellcodes. Bitwarden und Proton P
 * **Kosten:** **Bitwarden & Proton Pass** gratis, **NordPass Free** restriktiv
 * **Komfort:** **Autofill & Top-Apps** überall, NordPass mit bester UI
 
-<!-- [Folie 10: SUMMARY] -->
+<!-- [Folie 10: Zusammenfassung] -->
 <!--
 [SPRECHTEXT]
-Zusammenfassend: Die Zero-Knowledge-Sicherheit ist überall fehlerfrei. Der Unterschied liegt im Preismodell: Bitwarden bietet die stärkste Gratisversion für unbegrenzte Geräte. Proton Pass zieht gratis fast gleich, punktet aber primär mit integriertem Spamschutz. NordPass Free blockiert den Alltag durch das Ein-Geräte-Limit, bietet dafür aber das modernste Interface.
+Kurz gesagt: Alle drei sind sicher, aber sie unterscheiden sich vor allem im Preis und im Alltag. Bitwarden hat die beste kostenlose Version, Proton Pass ist stark im Datenschutz und NordPass wirkt am angenehmsten im Umgang, aber dafür ist die Gratisversion ziemlich eingeschränkt.
 -->
 
 ---
@@ -279,12 +279,12 @@ Zusammenfassend: Die Zero-Knowledge-Sicherheit ist überall fehlerfrei. Der Unte
 <div class="column-box">
 <h3>> Bitwarden</h3>
 <span class="compact">Für Open-Source-Fans, Self-Hosting & <strong>Sparfüchse</strong>.</span>
-<img src="./bilder/bitwarden.png" style="display:block;" />
+<img src="./bilder/Bitwarden.png" style="display:block;" />
 </div>
 <div class="column-box">
 <h3>> Proton Pass</h3>
 <span class="compact">Für maximalen <strong>Datenschutz</strong> & integrierten Spamschutz.</span>
-<img src="./bilder/proton_pass.png" style="display:block;" />
+<img src="./bilder/Proton_Pass.png" style="display:block;" />
 </div>
 <div class="column-box">
 <h3>> NordPass</h3>
@@ -292,8 +292,8 @@ Zusammenfassend: Die Zero-Knowledge-Sicherheit ist überall fehlerfrei. Der Unte
 <img src="./bilder/nordpass-logo_1-1-30.png" style="display:block;" />
 </div>
 </div>
-<!-- [Folie 11: LOG_OUT] -->
+<!-- [Folie 11: Fazit & Empfehlung] -->
 <!--
 [SPRECHTEXT]
-Das Fazit für die Praxis: Bitwarden ist die optimale Lösung für Open-Source-Anwender und preisbewusste Nutzer. Proton Pass empfiehlt sich bei Fokus auf Privatsphäre und E-Mail-Maskierung. NordPass ist eine exzellente, jedoch kostenpflichtige Premium-Option für höchste Designansprüche. Ich bedanke mich für Ihre Aufmerksamkeit.
+Wenn ich es ganz einfach sagen müsste: Bitwarden ist für viele die beste Balance aus Preis und Funktionen. Proton Pass ist besonders gut für Datenschutz und Spamschutz. NordPass sieht super aus und ist angenehm zu benutzen, kostet aber mehr. Vielen Dank für eure Aufmerksamkeit.
 -->
